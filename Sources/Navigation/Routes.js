@@ -2,7 +2,14 @@ import { useCallback } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavConfigs, NavRoutes } from './index';
-import { Login } from '../Screens';
+import {
+  CreateNewPassword,
+  ForgotPassword,
+  Login,
+  OtpVerification,
+  Signup,
+} from '../Screens';
+
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -10,6 +17,19 @@ const Routes = () => {
     return (
       <Stack.Navigator screenOptions={NavConfigs.screenOptions}>
         <Stack.Screen name={NavRoutes.Login} component={Login} />
+        <Stack.Screen name={NavRoutes.Signup} component={Signup} />
+        <Stack.Screen
+          name={NavRoutes.ForgotPassword}
+          component={ForgotPassword}
+        />
+        <Stack.Screen
+          name={NavRoutes.OtpVerification}
+          component={OtpVerification}
+        />
+        <Stack.Screen
+          name={NavRoutes.CreateNewPassword}
+          component={CreateNewPassword}
+        />
       </Stack.Navigator>
     );
   }, []);

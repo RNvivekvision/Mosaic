@@ -33,7 +33,8 @@ const RNHeader = ({
           containerStyle={styles.icon}
         />
         <RNText style={[styles.title, titleStyle]}>{title}</RNText>
-        {/* <View style={[styles.icon, { backgroundColor: Colors.transparent }]}></View> */}
+        <View
+          style={[styles.icon, { backgroundColor: Colors.transparent }]}></View>
       </View>
       {noScroll ? (
         children
@@ -53,7 +54,6 @@ const useStyles = () => {
   return StyleSheet.create({
     Container: {
       ...RNStyles.flexRowBetween,
-      backgroundColor: Colors.primary,
       paddingHorizontal: wp(4),
       paddingTop: inset.top + hp(2),
       paddingVertical: hp(2),
@@ -63,7 +63,7 @@ const useStyles = () => {
       width: size.iconContainer,
       height: size.iconContainer,
       borderRadius: wp(2),
-      backgroundColor: Colors.white + '20',
+      backgroundColor: Colors.inputBg,
     },
     title: {
       flex: 1,
@@ -71,7 +71,6 @@ const useStyles = () => {
       marginHorizontal: hp(1),
       fontSize: FontSize.font18,
       fontFamily: FontFamily.SemiBold,
-      color: Colors.white,
       textAlign: 'center',
     },
     next: {
@@ -85,6 +84,6 @@ const useStyles = () => {
   });
 };
 
-const size = { icon: wp(4), iconContainer: wp(8) };
+const size = { icon: wp(4), iconContainer: wp(10) };
 
 export default RNHeader;

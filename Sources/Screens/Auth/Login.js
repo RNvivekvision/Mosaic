@@ -1,25 +1,13 @@
 import { useRef, useState } from 'react';
-import {
-  Keyboard,
-  ScrollView,
-  StyleSheet,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import {
-  RNButton,
-  RNContainer,
-  RNIcon,
-  RNScrollView,
-  RNStyles,
-  RNText,
-} from '../Common';
-import { FontFamily, FontSize, hp, wp } from '../Theme';
-import { MOInput } from '../Components';
-import { Images } from '../Constants';
-import { Validation } from '../Utils';
+import { Keyboard, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { RNButton, RNContainer, RNScrollView, RNText } from '../../Common';
+import { FontFamily, FontSize, hp, wp } from '../../Theme';
+import { LoginWith, MOInput } from '../../Components';
+import { Images } from '../../Constants';
+import { Validation } from '../../Utils';
+import { NavRoutes } from '../../Navigation';
 
-const Login = () => {
+const Login = ({ navigation }) => {
   const passwordRef = useRef();
   const [State, setState] = useState({
     email: '',
@@ -45,14 +33,18 @@ const Login = () => {
 
   const onApplePress = () => {};
 
-  const onJoinNowPress = () => {};
+  const onJoinNowPress = () => {
+    navigation.replace(NavRoutes.Signup);
+  };
 
-  const onForgotPasswordPress = () => {};
+  const onForgotPasswordPress = () => {
+    navigation.navigate(NavRoutes.ForgotPassword);
+  };
 
   return (
     <RNContainer topSafeArea style={styles.container}>
+      <RNText style={styles.title}>{'Mosaic'}</RNText>
       <RNScrollView>
-        <RNText style={styles.title}>{'Mosaic'}</RNText>
         <RNText size={FontSize.font22} family={FontFamily.Medium}>
           {'Log In'}
         </RNText>
@@ -99,26 +91,7 @@ const Login = () => {
           onPress={onLoginPress}
         />
 
-        <RNText size={FontSize.font14} align={'center'}>
-          {'Or continue with'}
-        </RNText>
-
-        <View style={styles.iconContainer}>
-          <RNIcon icon={Images.google} onPress={onGooglePress} />
-          <RNIcon icon={Images.apple} onPress={onApplePress} />
-        </View>
-
-        <View style={RNStyles.flexRowCenter}>
-          <RNText size={FontSize.font12}>{'New to Mosaic ?  '}</RNText>
-          <TouchableOpacity activeOpacity={0.6} onPress={onJoinNowPress}>
-            <RNText
-              textLine={'underline'}
-              family={FontFamily.SemiBold}
-              size={FontSize.font12}>
-              {'Join Now'}
-            </RNText>
-          </TouchableOpacity>
-        </View>
+        <LoginWith isLogin />
       </RNScrollView>
     </RNContainer>
   );
@@ -131,7 +104,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: FontSize.font36,
     fontFamily: FontFamily.SemiBold,
-    paddingVertical: hp(2),
+    paddingVertical: hp(4),
   },
   inputContainer: {
     flex: 1,
@@ -143,12 +116,6 @@ const styles = StyleSheet.create({
   },
   login: {
     marginBottom: hp(4),
-  },
-  iconContainer: {
-    ...RNStyles.flexRowBetween,
-    alignSelf: 'center',
-    paddingVertical: hp(2),
-    width: '30%',
   },
 });
 

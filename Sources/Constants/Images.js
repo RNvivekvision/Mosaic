@@ -7,6 +7,8 @@ const Images = {
   show: require(imagePath + 'show' + png),
   google: require(imagePath + 'google' + png),
   apple: require(imagePath + 'apple' + png),
+  forgotPassword: require(imagePath + 'forgotPassword' + png),
+  otpVerification: require(imagePath + 'otpVerification' + png),
 };
 
 export default Images;

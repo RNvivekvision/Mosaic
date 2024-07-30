@@ -1,2 +1,7 @@
-import Login from './Login';
-export { Login };
+export {
+  Login,
+  Signup,
+  ForgotPassword,
+  OtpVerification,
+  CreateNewPassword,
+} from './Auth';

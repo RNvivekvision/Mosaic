@@ -1,17 +1,34 @@
 import React, { forwardRef } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { RNInput, RNStyles, RNText, RNIcon } from '../../Common';
 import { Colors, FontSize, hp, wp } from '../../Theme';
 
 const MOInput = (
-  { title, icon, onIconPress, error, containerStyle, ...rest },
+  {
+    title,
+    icon,
+    text,
+    textStyle,
+    onIconPress,
+    onPress,
+    error,
+    containerStyle,
+    ...rest
+  },
   ref,
 ) => {
   const styles = useStyles({ error });
   return (
     <View style={[styles.container, containerStyle]}>
       {title && <RNText style={styles.title}>{title}</RNText>}
-      {
+      {text ? (
+        <TouchableOpacity
+          activeOpacity={0.6}
+          onPress={onPress}
+          style={styles.inputContainer}>
+          <RNText style={[styles.text, textStyle]}>{text}</RNText>
+        </TouchableOpacity>
+      ) : (
         <View style={styles.inputContainer}>
           <RNInput
             ref={ref}
@@ -28,7 +45,7 @@ const MOInput = (
             />
           )}
         </View>
-      }
+      )}
     </View>
   );
 };
@@ -41,6 +58,11 @@ const useStyles = ({ error }) => {
     title: {
       fontSize: FontSize.font14,
       color: error ? Colors.error : Colors.black,
+    },
+    text: {
+      paddingVertical: hp(1),
+      fontSize: FontSize.font12,
+      color: error ? Colors.error : Colors.placeholder,
     },
     inputContainer: {
       ...RNStyles.flexRow,

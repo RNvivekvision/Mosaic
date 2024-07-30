@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { Alert, Linking } from 'react-native';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 const ALERT = ({ Title, Text, Buttons }) => Alert.alert(Title, Text, Buttons);
@@ -18,12 +19,17 @@ const getAppData = async () => {
   const value = await AsyncStorage.getItem('appdata');
   return JSON.parse(value);
 };
+const formatDate = ({ date, format = 'DD-MM-YYYY' }) => {
+  const d = moment(date).format(format);
+  return d;
+};
 const Functions = {
   ALERT,
   OpenUrl,
   setAppData,
   getAppData,
   wait,
+  formatDate,
 };
 
 export default Functions;
