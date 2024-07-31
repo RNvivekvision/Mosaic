@@ -16,6 +16,8 @@ const ForgotPassword = ({ navigation }) => {
   };
 
   const onSendCode = () => {
+    setState(p => ({ ...p, submitPressed: true }));
+    if (!errors.noError) return;
     navigation.navigate(NavRoutes.OtpVerification);
   };
 

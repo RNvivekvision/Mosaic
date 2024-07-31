@@ -24,14 +24,15 @@ const MODropDown = ({
   renderLeftIcon,
   itemContainerStyle,
   dropDownContainerStyle,
+  error,
   ...rest
 }) => {
   return (
     <View style={[styles.container, containerStyle]}>
       {title && (
         <RNText
-          color={Colors.black}
-          family={FontFamily.SemiBold}
+          color={error ? Colors.error : Colors.black}
+          family={FontFamily.Regular}
           size={FontSize.font14}>
           {title}
         </RNText>
@@ -39,12 +40,24 @@ const MODropDown = ({
       {data?.length > 0 && (
         <Dropdown
           style={[styles.dropdownStyle, dropdownStyle]}
-          placeholderStyle={[styles.placeholderStyle, dropdownPlaceholderStyle]}
+          placeholderStyle={[
+            styles.placeholderStyle,
+            dropdownPlaceholderStyle,
+            {
+              color: error ? Colors.error : Colors.placeholder,
+            },
+          ]}
           selectedTextStyle={[
             styles.selectedTextStyle,
             dropDownSelectedTextStyle,
           ]}
-          iconStyle={[styles.iconStyle, dropDownIconStyle]}
+          iconStyle={[
+            styles.iconStyle,
+            dropDownIconStyle,
+            {
+              tintColor: error ? Colors.error : Colors.black,
+            },
+          ]}
           itemContainerStyle={[styles.itemContainerStyle, itemContainerStyle]}
           containerStyle={[styles.containerStyle, dropDownContainerStyle]}
           itemTextStyle={[styles.itemTextStyle, dropDownItemTextStyle]}

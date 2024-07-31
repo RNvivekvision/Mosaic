@@ -4,6 +4,7 @@ import { RNButton, RNContainer, RNHeader, RNText } from '../../Common';
 import { FontFamily, FontSize, hp, wp } from '../../Theme';
 import { Images } from '../../Constants';
 import { MOInput } from '../../Components';
+import { Validation } from '../../Utils';
 
 const CreateNewPassword = () => {
   const confirmPasswordRef = useRef();
@@ -15,7 +16,25 @@ const CreateNewPassword = () => {
     submitPressed: false,
   });
 
-  const onSavePress = () => {};
+  const errors = {
+    password:
+      State.submitPressed && !Validation.isPasswordValid(State.password),
+    confirmPassword:
+      State.submitPressed &&
+      (!Validation.isPasswordValid(State.confirmPassword) ||
+        !Validation.isSamePasswords(State.password, State.confirmPassword)),
+    noError:
+      Validation.isPasswordValid(State.password) &&
+      Validation.isPasswordValid(State.confirmPassword) &&
+      Validation.isSamePasswords(State.password, State.confirmPassword),
+  };
+
+  const onSavePress = () => {
+    setState(p => ({ ...p, submitPressed: true }));
+
+    if (!errors.noError) return;
+    console.log('Create new password api call...');
+  };
 
   return (
     <RNContainer>
@@ -34,7 +53,7 @@ const CreateNewPassword = () => {
             value={State.password}
             onChangeText={v => setState(p => ({ ...p, password: v.trim() }))}
             onSubmitEditing={() => confirmPasswordRef.current?.focus()}
-            // error={errors.password}
+            error={errors.password}
             secureTextEntry={!State.showPassword}
             icon={!State.showPassword ? Images.show : Images.hide}
             onIconPress={() =>
@@ -52,7 +71,7 @@ const CreateNewPassword = () => {
               setState(p => ({ ...p, confirmPassword: v.trim() }))
             }
             onSubmitEditing={Keyboard.dismiss}
-            // error={errors.confirmPassword}
+            error={errors.confirmPassword}
             secureTextEntry={!State.showConfirmPassword}
             icon={!State.showConfirmPassword ? Images.show : Images.hide}
             onIconPress={() =>

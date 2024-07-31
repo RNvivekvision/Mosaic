@@ -27,14 +27,9 @@ const Login = ({ navigation }) => {
 
   const onLoginPress = () => {
     setState(p => ({ ...p, submitPressed: true }));
-  };
 
-  const onGooglePress = () => {};
-
-  const onApplePress = () => {};
-
-  const onJoinNowPress = () => {
-    navigation.replace(NavRoutes.Signup);
+    if (!errors.noError) return;
+    console.log('Login Api call...');
   };
 
   const onForgotPasswordPress = () => {

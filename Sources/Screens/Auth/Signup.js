@@ -30,10 +30,21 @@ const Signup = () => {
     email: State.submitPressed && !Validation.isEmailValid(State.email),
     password:
       State.submitPressed && !Validation.isPasswordValid(State.password),
+    dateOfBirth: State.submitPressed && !State.dateOfBirth,
+    location: State.submitPressed && !State.location,
     noError:
       Validation.isPasswordValid(State.name) &&
       Validation.isEmailValid(State.email) &&
-      Validation.isPasswordValid(State.password),
+      Validation.isPasswordValid(State.password) &&
+      State.dateOfBirth &&
+      State.location,
+  };
+
+  const onSignupPress = () => {
+    setState(p => ({ ...p, submitPressed: true }));
+
+    if (!errors.noError) return;
+    console.log('Signup api call...');
   };
 
   return (
@@ -82,12 +93,16 @@ const Signup = () => {
             }
           />
           <MOInput
-            error={false}
             title={'Date Of Birth'}
             text={State.dateOfBirth ? DOB : 'DD-MM-YYYY'}
             textStyle={{
-              color: State.dateOfBirth ? Colors.black : Colors.placeholder,
+              color: State.dateOfBirth
+                ? Colors.black
+                : errors.dateOfBirth
+                ? Colors.error
+                : Colors.placeholder,
             }}
+            error={errors.dateOfBirth}
             onPress={() => setState(p => ({ ...p, openDatePicker: true }))}
           />
 
@@ -97,10 +112,15 @@ const Signup = () => {
             data={DummyData.signup.states}
             onChange={v => setState(p => ({ ...p, location: v }))}
             value={State.location?.value}
+            error={errors.location}
           />
         </View>
 
-        <RNButton title={'Sign Up'} style={styles.signup} />
+        <RNButton
+          title={'Sign Up'}
+          style={styles.signup}
+          onPress={onSignupPress}
+        />
 
         <LoginWith />
       </RNScrollView>
