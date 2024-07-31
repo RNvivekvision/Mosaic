@@ -13,7 +13,6 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-Mosaic-MosaicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Mosaic-MosaicTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		847D769F7202E874BEA71A54 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4B028F152FB448D918A92D57 /* PrivacyInfo.xcprivacy */; };
 		E25014FD2C58BC8B00A41969 /* Helvetica-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E25014F62C58BC8B00A41969 /* Helvetica-Bold.ttf */; };
 		E25014FE2C58BC8B00A41969 /* Helvetica-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E25014F72C58BC8B00A41969 /* Helvetica-Light.ttf */; };
@@ -22,6 +21,7 @@
 		E25015012C58BC8B00A41969 /* Helvetica-Compressed.otf in Resources */ = {isa = PBXBuildFile; fileRef = E25014FA2C58BC8B00A41969 /* Helvetica-Compressed.otf */; };
 		E25015022C58BC8B00A41969 /* Helvetica-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E25014FB2C58BC8B00A41969 /* Helvetica-Oblique.ttf */; };
 		E25015032C58BC8B00A41969 /* HelveticaRounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E25014FC2C58BC8B00A41969 /* HelveticaRounded-Bold.otf */; };
+		E2DBB7B82C59FCC300C096B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DBB7B72C59FCC300C096B3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		5709B34CF0A7D63546082F79 /* Pods-Mosaic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mosaic.release.xcconfig"; path = "Target Support Files/Pods-Mosaic/Pods-Mosaic.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Mosaic-MosaicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mosaic-MosaicTests.debug.xcconfig"; path = "Target Support Files/Pods-Mosaic-MosaicTests/Pods-Mosaic-MosaicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-Mosaic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mosaic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Mosaic/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Mosaic-MosaicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mosaic-MosaicTests.release.xcconfig"; path = "Target Support Files/Pods-Mosaic-MosaicTests/Pods-Mosaic-MosaicTests.release.xcconfig"; sourceTree = "<group>"; };
 		E25014F62C58BC8B00A41969 /* Helvetica-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Helvetica-Bold.ttf"; path = "../../Sources/Assets/Fonts/Helvetica-Bold.ttf"; sourceTree = "<group>"; };
 		E25014F72C58BC8B00A41969 /* Helvetica-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Helvetica-Light.ttf"; path = "../../Sources/Assets/Fonts/Helvetica-Light.ttf"; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		E25014FA2C58BC8B00A41969 /* Helvetica-Compressed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Helvetica-Compressed.otf"; path = "../../Sources/Assets/Fonts/Helvetica-Compressed.otf"; sourceTree = "<group>"; };
 		E25014FB2C58BC8B00A41969 /* Helvetica-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Helvetica-Oblique.ttf"; path = "../../Sources/Assets/Fonts/Helvetica-Oblique.ttf"; sourceTree = "<group>"; };
 		E25014FC2C58BC8B00A41969 /* HelveticaRounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HelveticaRounded-Bold.otf"; path = "../../Sources/Assets/Fonts/HelveticaRounded-Bold.otf"; sourceTree = "<group>"; };
+		E2DBB7B72C59FCC300C096B3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Mosaic/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -107,8 +107,8 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				E2DBB7B72C59FCC300C096B3 /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				4B028F152FB448D918A92D57 /* PrivacyInfo.xcprivacy */,
 			);
@@ -276,9 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25014FE2C58BC8B00A41969 /* Helvetica-Light.ttf in Resources */,
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				E25015022C58BC8B00A41969 /* Helvetica-Oblique.ttf in Resources */,
 				E25014FF2C58BC8B00A41969 /* Helvetica.ttf in Resources */,
+				E2DBB7B82C59FCC300C096B3 /* LaunchScreen.storyboard in Resources */,
 				E25015032C58BC8B00A41969 /* HelveticaRounded-Bold.otf in Resources */,
 				E25015002C58BC8B00A41969 /* Helvetica-BoldOblique.ttf in Resources */,
 				E25014FD2C58BC8B00A41969 /* Helvetica-Bold.ttf in Resources */,
@@ -626,10 +626,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -701,10 +698,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
