@@ -63,7 +63,7 @@ const useStyles = () => {
       width: size.iconContainer,
       height: size.iconContainer,
       borderRadius: wp(2),
-      backgroundColor: Colors.inputBg,
+      backgroundColor: Colors.grey,
     },
     title: {
       flex: 1,

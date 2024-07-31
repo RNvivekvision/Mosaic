@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     ...RNStyles.center,
     width: size,
     height: size,
-    backgroundColor: Colors.inputBg,
+    backgroundColor: Colors.grey,
     borderRadius: wp(2),
   },
   icon: {

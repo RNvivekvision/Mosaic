@@ -45,7 +45,7 @@ const useStyles = ({ disable }) => {
       ...RNStyles.center,
       ...RNStyles.flexRow,
       backgroundColor: disable ? Colors.placeholder : Colors.primary,
-      paddingVertical: hp(2),
+      paddingVertical: hp(1.5),
       paddingHorizontal: wp(8),
       marginVertical: hp(1),
       borderRadius: wp(3),

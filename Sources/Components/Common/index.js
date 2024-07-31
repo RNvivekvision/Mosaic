@@ -1,3 +1,4 @@
 import MOInput from './MOInput';
 import MODropDown from './MODropDown';
-export { MOInput, MODropDown };
+import MOSteps from './MOSteps';
+export { MOInput, MODropDown, MOSteps };

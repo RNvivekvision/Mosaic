@@ -71,7 +71,7 @@ const useStyles = ({ error }) => {
       borderRadius: wp(3),
       paddingVertical: hp(0.5),
       marginTop: hp(1),
-      backgroundColor: Colors.inputBg,
+      backgroundColor: Colors.grey,
     },
     input: {
       flex: 1,

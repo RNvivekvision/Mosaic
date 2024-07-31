@@ -5,3 +5,4 @@ export {
   OtpVerification,
   CreateNewPassword,
 } from './Auth';
+export { Selection } from './App';

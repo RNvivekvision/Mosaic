@@ -4,6 +4,7 @@ const NavRoutes = {
   ForgotPassword: 'Forgot Password',
   OtpVerification: 'Otp Verification',
   CreateNewPassword: 'Create New Password',
+  Selection: 'Selection',
 };
 
 export default NavRoutes;

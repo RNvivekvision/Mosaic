@@ -7,6 +7,7 @@ import {
   ForgotPassword,
   Login,
   OtpVerification,
+  Selection,
   Signup,
 } from '../Screens';
 import SplashScreen from 'react-native-splash-screen';
@@ -23,6 +24,7 @@ const Routes = () => {
   const Screens = useCallback(() => {
     return (
       <Stack.Navigator screenOptions={NavConfigs.screenOptions}>
+        <Stack.Screen name={NavRoutes.Selection} component={Selection} />
         <Stack.Screen name={NavRoutes.Login} component={Login} />
         <Stack.Screen name={NavRoutes.Signup} component={Signup} />
         <Stack.Screen

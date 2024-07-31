@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     paddingVertical: hp(2),
   },
   dropdownStyle: {
-    backgroundColor: Colors.inputBg,
+    backgroundColor: Colors.grey,
     borderRadius: wp(3),
     paddingHorizontal: wp(4),
     paddingVertical: hp(0.5),
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   },
   inputSearchStyle: {},
   itemContainerStyle: {
-    backgroundColor: Colors.inputBg,
+    backgroundColor: Colors.grey,
   },
   containerStyle: {
     backgroundColor: Colors.white,
